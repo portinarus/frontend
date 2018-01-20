@@ -54,9 +54,10 @@ app.get('*', (req, res) => {
 // start the server
 const port = process.env.PORT || 3000;
 const env = process.env.NODE_ENV || 'production';
-server.listen(port, err => {
+const host = '0.0.0.0'
+server.listen(port, host, err => {
   if (err) {
     return console.error(err);
   }
-  console.info(`Server running on http://localhost:${port} [${env}]`);
+  console.info(`Server running on http://${host}:${port} [${env}]`);
 });

@@ -4,8 +4,8 @@
   "description": "Portinarus provides you a nice way to keep your photos in a collaborative way.",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=PRODUCTION node index.js",
-    "start-dev": "node_modules/.bin/webpack-dev-server",
+    "start": "NODE_ENV=production node_modules/.bin/babel-node --presets react,es2015 src/server.js",
+    "build": "NODE_ENV=production node_modules/.bin/webpack -p --progress",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -35,7 +35,6 @@
   },
   "devDependencies": {
     "babel-loader": "^6.4.1",
-    "http-server": "^0.9.0",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.9.7"
   }

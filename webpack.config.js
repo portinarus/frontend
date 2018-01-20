@@ -11,6 +11,7 @@ module.exports = {
   devServer: {
     inline: true,
     port: 3333,
+    host: '0.0.0.0',
     contentBase: "src/static/",
     historyApiFallback: {
       index: '/index-static.html'
